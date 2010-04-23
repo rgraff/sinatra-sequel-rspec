@@ -10,5 +10,7 @@ describe "App" do
   it "should respond to /" do
     get '/'
     last_response.should be_ok
+    last_response.body.should include('Hello World')
   end
 end
+

@@ -3,5 +3,5 @@ require 'sinatra'
 require 'config/init'
 
 get '/' do
-  "Hello World!"
+  erb :home
 end

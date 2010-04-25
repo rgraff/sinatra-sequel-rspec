@@ -20,6 +20,9 @@ helpers do
   include Rack::Utils
   alias_method :h, :escape_html
   
+  # partial helper taken from Sam Elliot (aka lenary) at http://gist.github.com/119874 
+  # which itself was based on Chris Schneider's implementation:
+  # http://github.com/cschneid/irclogger/blob/master/lib/partials.rb
   def partial(template, *args)
     template_array = template.to_s.split('/')
     template = template_array[0..-2].join('/') + "/_#{template_array[-1]}"

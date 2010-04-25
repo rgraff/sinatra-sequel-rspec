@@ -1,0 +1,11 @@
+<form action="/people<%= "/#{person.id}" unless person.new? %>" method="post">
+<%= "<input type=\"hidden\" name=\"_method\" value=\"put\" />" unless person.new? %>
+  <p>
+  	<label>Name</label><br />
+  	<input type="text" name="name" value="<%=h person.name %>"/>	
+  </p>
+  <p>
+  	<input type="submit" /> | <a href="/people<%= "/#{person.id}" unless person.new? %>">back</a>
+  </p>
+</form>
+  

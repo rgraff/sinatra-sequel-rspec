@@ -1,0 +1,18 @@
+<h1>People</h1>
+<p><a href="/">Say Hello</a></p>
+<table>
+  <tr>
+    <th>Name</td>
+    <th></td>
+  </tr>
+
+<% @people.each do |person| %>
+  <tr>
+    <td><%=h person.name %></td>
+    <td><form id="delete_<%= person.id%>" action="/people/<%= person.id %>" method="post"><input type="hidden" name="_method" value="delete" /></form>
+      <a href="/people/<%= person.id %>">Show</a> | <a href="/people/<%= person.id %>/edit">Edit</a> | <a href="javascript:document.forms['delete_<%= person.id %>'].submit()">Delete</a></td>
+  </tr>
+<% end %>
+</table>
+
+<p><a href="/people/new">New Person</a></p>

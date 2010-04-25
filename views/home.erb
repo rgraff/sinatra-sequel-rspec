@@ -1,3 +1,4 @@
 <div style="text-align: center;">
-  <h1>Hello World</h1>
+  <h1>Hello <%=h @person ? @person.name : 'World' %></h1>
+  <p><a href="/">Refresh</a> | <a href="/people">People</a></p>
 </div>

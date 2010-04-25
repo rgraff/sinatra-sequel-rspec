@@ -1,0 +1,5 @@
+<h1><%=h @person.name %></h1>
+
+<p><a href="/people/<%= @person.id %>/edit">Edit</a> | <a href="javascript:document.forms['delete_<%= @person.id%>'].submit();">Delete</a> | <a href="/people">List</a></p>
+<form id="delete_<%= @person.id%>" action="/people/<%= @person.id %>" method="post"><input type="hidden" name="_method" value="delete" /></form>
+  
